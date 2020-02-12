@@ -1,0 +1,79 @@
+<div class="row header">
+  <div class="col-md-12">
+    <div id="mySidenav" class="sidenav">
+      <span href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</span>
+      <li *ngFor="let source of sources" (click)="searchBySource(source.id);closeNav()">
+        <a>{{source.name}}</a>
+      </li>
+    </div>
+    <a (click)="openNav()" class="menu">
+      <button class="fas fa-align-left"></button>
+    </a>
+  </div>
+  <div class="col-md-2 default" id="top">
+    <p (click)="loadDefault()" >News Headline</p>
+  </div>
+</div>
+<div class="container white-back">
+  <div class="col-md-12">
+    Source : {{sourcehead}}
+  </div>
+</div>
+<div class="container mb-4" *ngFor="let article of articles">
+  <div class="row title">
+    <div class="col-md-1">
+      <img class="label" src="../../../assets/images/labels.png" alt="">
+      <img class="user" src="../../../assets/images/user.png" alt="">
+    </div>
+    <div class="col-md-11">
+      <p style="font-weight: 700;">{{article.title}}</p>
+      <span class="author">{{article.author}}</span>
+    </div>
+  </div>
+  <div class="row urlimage">
+    <div class="col-md-12">
+      <img src={{article.urlToImage}} alt="">
+    </div>
+  </div>
+  <div class="row description">
+    <div class="col-md-12">
+      {{article.description}}
+    </div>
+  </div>
+  <div class="row like">
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+      <p>
+        <i class="fas fa-thumbs-up" aria-hidden="true"></i>
+        <span>12 Likes</span>
+      </p>
+    </div>
+    <div class="col-md-2">
+      <p>
+        <i class="fas fa-comment-alt" aria-hidden="true"></i>
+        <span>Comment</span>
+      </p>
+    </div>
+    <div class="col-md-2">
+      <p>
+        <i class="fas fa-share-alt" aria-hidden="true"></i>
+        <span>Share</span>
+      </p>
+    </div>
+    <div class="col-md-2">
+      <p>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <span>More</span>
+      </p>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 text-center a" [ngClass]="scrollar ? 'show' : 'hide'">
+    <button class="btn btn-circle" pageScroll href="#top">
+      <img src="../../../assets/images/ui.png" alt="">
+    </button>
+  </div>
+</div>

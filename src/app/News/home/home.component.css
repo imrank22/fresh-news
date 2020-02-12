@@ -1,0 +1,234 @@
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #5a7670; 
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    top: -6px;
+    font-size: 35px;
+    width: 39px;
+    height: 40px;
+    position: absolute;
+    text-align: center;
+    left: -3px;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+
+  .fa-align-left{
+    cursor: pointer;
+    font-size: 22px
+  }
+  .header{
+    padding: 16px 0px 6px 0px;
+/*     background: #6d7fcc;
+    color: #fff */
+    color: #fff;
+    background: #5a7670;
+  }
+  .sidenav a{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+  li:hover, .closebtn{
+    
+    background-color: #658d83;
+    cursor: pointer
+  }
+  li{
+    list-style: none;
+  }
+
+  .sidenav::-webkit-scrollbar{
+    background: #5a7670;
+    border-radius: 20px;
+    width: 7px;
+  }
+  .sidenav::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 20px;
+  }
+  .sidenav::-webkit-scrollbar-track {
+    box-shadow: #5a7670
+  }
+  .menu{
+    left: 35px;
+    position: absolute;
+    top: 4px;
+  }
+  .header .col-md-2{
+    margin: auto;
+    position: relative;
+    left: -11px;
+    font-size: 23px;
+  }
+  .container{
+    background: #fff;
+    box-shadow: 0px 0px 6px 2px #ddd;
+    border-radius: 2px;
+    margin-top: 10px;
+    color: #5a7670
+  }
+  .title{
+    padding: 18px;
+  }
+  .urlimage img{
+    width: 100%;
+    height: 450px;
+  }
+  .author{
+    display: block;
+    font-size: 14px;
+  }
+  .label{
+    width: 60px;
+    position: absolute;
+    top: -16px;
+  }
+  .user{
+    width: 23px;
+    top: 38px;
+    left: 29px;
+    position: absolute;
+  }
+  .description{
+    padding: 20px;
+    font-weight: 600;
+  }
+  .like .col-md-2{
+    color: #5a7670;
+    padding: 10px;
+    text-align: center
+  }
+  .like p{
+    cursor: pointer;
+  }
+  .like span{
+    margin-left: 4%;
+  }
+  .like p:hover{
+    transform: scale(1.1);
+    font-weight: 600;
+    transition: 0.1s;
+  }
+  .default p{
+    cursor: pointer;
+  }
+  .default{
+    text-align: -webkit-center;
+    text-align: -e-center;
+    text-align: -moz-center;
+    text-align: -o-center;
+  }
+  .white-back{
+/*     background: #6d7fcc;
+    color: #fff; */
+    color: #5a7670;
+    background: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+  }
+  .default p{
+    animation: spin 2.3s 1 ease-out;
+    position: relative
+  }
+
+
+  .btn-circle{
+    animation: show 0.5s 1;
+    border-radius: 50%;
+    background: #4e6a64;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    color: #fff;
+    top: 86%;
+  }
+  .btn-circle:hover{
+    animation: show 0.5s 1;
+    transition: 0.2s;
+    transform: scale(1.1);
+    border-radius: 50%;
+    background: #658d83;
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    color: #fff;
+    top: 86%;
+  }
+  .btn-circle img{
+    position: relative;
+    top: -3px;
+    left: 0px;
+    width: 45px;
+  }
+  .show{
+    display: block;
+  }
+  .hide{
+    display: none;
+    
+  }
+  .container{
+    position: relative;
+    animation: ltor 2s 1 ease-out;
+  }
+
+
+@keyframes ltor{
+  from{
+    right: -500px;
+  }to{
+    right: 0px;
+  }
+}
+  @keyframes spin{
+    from{
+      /* transform: rotate(0deg); */
+      left: -500px;
+    }
+    to{
+      left: 5px;
+      /* transform: rotate(360deg); */
+    }
+  }
+  @keyframes show{
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(1.2);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }

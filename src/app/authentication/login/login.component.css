@@ -1,0 +1,74 @@
+.login-back{
+    background-image: url("../../../assets/images/login-background.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y:60%; 
+}
+.white-bg{
+    background-image: url(../../../assets/images/login-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: transparent;
+    border: 2px solid #fff;
+    height: 230px;
+    width: 400px;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 500;
+}
+.login-head{
+    font-size: 35px;
+    color: #fff;
+    margin: 10% 0px 0px 0px;
+}
+.form-data{
+    display: block;
+}
+.input-text{
+    position: absolute;
+    top: 26px;
+    border-width: 0px 0px 1px 0px;
+    border-radius: 0px;
+    width: 80%;
+    left: 10%;
+}
+.input-text:focus~.label,
+.input-text:valid ~ .label{
+    top: 10px;
+    left: 48px;
+    color: #fff;
+    transition: 0.3s ease;
+    background: transparent;
+}
+.label{
+    position: absolute;
+    top: 30px;
+    left: 52px;
+    margin-top: -15px;
+    background: #fff;
+}
+form > .row{
+    height: 80px;
+    padding: 10px 0px;
+    margin-top: 2%
+}
+.btn-login{
+    width: 30%;
+    background: #fff;
+    border-radius: 0px;
+    font-size: 20px
+}
+span{
+    top: 69px;
+    position: absolute;
+    font-size: 12px;
+    color: #fff;
+    left: 42px;
+    cursor: pointer;
+}
+span:hover{
+    transition: 0.2s ease;
+    transform: scale(1.1);
+}
